@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Basic Tutorial</title>
+</head>
+
+<body>
+
+
+    <div id="root"></div>
+    <div id="img"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+
+        const h1 = React.createElement("h1", {}, "Hii This is H1");
+        const h2 = React.createElement("h2", {}, "Hii This is H2");
+        const h3 = React.createElement("h3", {}, "Hii This is H3");
+        const h4 = React.createElement("h4", {}, "Hii This is H4");
+        const h5 = React.createElement("h5", {}, "Hii This is H5");
+        const h6 = React.createElement("h6", {}, "Hii This is H6");
+        const img = React.createElement("img", { src: "https://www.google.com/imgres?q=img&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fe%2Fe2%2FIMG_Academy_Logo.svg%2F640px-IMG_Academy_Logo.svg.png&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FIMG_Academy&docid=r6Vx2lLW0GRdzM&tbnid=4js3zuQVwhXy9M&vet=12ahUKEwjwy6Kcs-uNAxWJzTgGHfADJjQQM3oECGgQAA..i&w=640&h=641&hcb=2&ved=2ahUKEwjwy6Kcs-uNAxWJzTgGHfADJjQQM3oECGgQAA" });
+
+
+        const tableDetails = React.createElement("table", { style: { border: "1px solid black" } },
+            React.createElement("thead", { style: { border: "1px solid black" } },
+                React.createElement("tr", { style: { border: "1px solid black" } },
+                    React.createElement("th", { style: { border: "1px solid black" } }, "ID"),
+                    React.createElement("th", { style: { border: "1px solid black" } }, "Name"),
+                    React.createElement("th", { style: { border: "1px solid black" } }, "Email"),
+                    React.createElement("th", { style: { border: "1px solid black" } }, "Department"))),
+            React.createElement("tbody", { style: { border: "1px solid black" } },
+                React.createElement("tr", { style: { border: "1px solid black" } },
+                    React.createElement("td", { style: { border: "1px solid black" } }, "1"),
+                    React.createElement("td", { style: { border: "1px solid black" } }, "Vijay"),
+                    React.createElement("td", { style: { border: "1px solid black" } }, "vijay@gmail.com"),
+                    React.createElement("td", { style: { border: "1px solid black" } }, "IT-Student"))));
+
+        const arr = [h1, h2, h3, h4, h5, h6, img, tableDetails];
+        const box = document.getElementById("root");
+        const sRoot = ReactDOM.createRoot(box);
+        sRoot.render(arr);
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
